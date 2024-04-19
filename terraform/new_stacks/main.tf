@@ -9,19 +9,15 @@ terraform {
 }
 
 resource "spacelift_stack" "stupid_stack" {
-  gitlab {
-    namespace = "jpancoast"
-    id        = "jpancoast-gitlab-personal"
-  }
-
   name                            = "stupid_stack"
   administrative                  = true
   autodeploy                      = true
   branch                          = "main"
-  repository                      = "spacelift-all-hands"
+  repository                      = "pb-allhands-spacelift"
   project_root                    = "stupid_stack"
   manage_state                    = true
   terraform_external_state_access = true
+  space_id                        = "spacelift-all-hands-github-integration"
 }
 
 output "stupid_stack" {
