@@ -10,7 +10,7 @@ terraform {
 
 resource "spacelift_stack" "stupid_stack" {
   name                            = "stupid_stack"
-  administrative                  = true
+  administrative                  = false
   autodeploy                      = true
   branch                          = "main"
   repository                      = "pb-allhands-spacelift"
