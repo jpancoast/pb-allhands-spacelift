@@ -17,7 +17,7 @@ resource "spacelift_stack" "stupid_stack" {
   project_root                    = "stupid_stack"
   manage_state                    = true
   terraform_external_state_access = true
-  space_id                        = "root"
+  space_id                        = "rootasdfasdf"
 }
 
 output "stupid_stack" {
