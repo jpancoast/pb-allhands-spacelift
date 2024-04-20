@@ -31,7 +31,7 @@ resource "spacelift_aws_integration" "this" {
   name = "aws_integration_pb_allhands"
 
   # We need to set the ARN manually rather than referencing the role to avoid a circular dependency
-  role_arn                       = data.aws_iam_role.stupid_stack.role_arn
+  role_arn                       = data.aws_iam_role.stupid_stack.arn
   generate_credentials_in_worker = false
 }
 
