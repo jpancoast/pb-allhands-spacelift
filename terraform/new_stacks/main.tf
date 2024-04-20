@@ -23,15 +23,15 @@ resource "spacelift_stack" "stupid_stack" {
   terraform_workflow_tool         = "OPEN_TOFU"
 }
 
-data "aws_iam_role" "stupid_stack" {
-  name = "spacelift-allhands-testing "
-}
+#data "aws_iam_role" "stupid_stack" {
+#  name = "spacelift-allhands-testing "
+#}
 
 resource "spacelift_aws_integration" "this" {
   name = "aws_integration_pb_allhands"
 
   # We need to set the ARN manually rather than referencing the role to avoid a circular dependency
-  role_arn                       = data.aws_iam_role.stupid_stack.arn
+  role_arn                       = "arn:aws:iam::339477103113:role/spacelift-allhands-testing"
   generate_credentials_in_worker = false
 }
 
