@@ -37,7 +37,7 @@ resource "spacelift_aws_integration" "this" {
 
 resource "spacelift_aws_integration_attachment" "this" {
   integration_id = spacelift_aws_integration.this.id
-  stack_id       = spacelift_stack.stupid_stack.stack_id
+  stack_id       = spacelift_stack.stupid_stack.id
   read           = true
   write          = true
 }
