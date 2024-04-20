@@ -27,3 +27,7 @@ output "stupid_stack" {
   value     = spacelift_stack.stupid_stack
   sensitive = true
 }
+
+output "thing" {
+  value = "thing"
+}
