@@ -17,7 +17,10 @@ resource "spacelift_stack" "stupid_stack" {
   project_root                    = "terraform/stupid_stack"
   manage_state                    = true
   terraform_external_state_access = true
+  terraform_smart_sanitization    = true
+  terraform_version               = "1.6.2"
   space_id                        = "pb-allhands-01HVQ1K7ETJAWFR26QXC2B4S41"
+  terraform_workflow_tool         = "OPEN_TOFU"
 }
 
 output "stupid_stack" {
