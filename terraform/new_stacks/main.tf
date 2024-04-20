@@ -33,6 +33,7 @@ resource "spacelift_aws_integration" "this" {
   # We need to set the ARN manually rather than referencing the role to avoid a circular dependency
   role_arn                       = "arn:aws:iam::339477103113:role/spacelift-allhands-testing"
   generate_credentials_in_worker = false
+  space_id                       = "pb-allhands-01HVQ1K7ETJAWFR26QXC2B4S41"
 }
 
 resource "spacelift_aws_integration_attachment" "this" {
