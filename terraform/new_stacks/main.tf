@@ -23,6 +23,25 @@ resource "spacelift_stack" "stupid_stack" {
   terraform_workflow_tool         = "OPEN_TOFU"
 }
 
+data "aws_iam_role" "stupid_stack" {
+  name = "spacelift-allhands-testing "
+}
+
+resource "spacelift_aws_integration" "this" {
+  name = "aws_integration_pb_allhands"
+
+  # We need to set the ARN manually rather than referencing the role to avoid a circular dependency
+  role_arn                       = data.aws_iam_role.stupid_stack.role_arn
+  generate_credentials_in_worker = false
+}
+
+resource "spacelift_aws_integration_attachment" "this" {
+  integration_id = spacelift_aws_integration.this.id
+  stack_id       = spacelift_stack.stupid_stack.stack_id
+  read           = true
+  write          = true
+}
+
 output "stupid_stack" {
   value     = spacelift_stack.stupid_stack
   sensitive = true
