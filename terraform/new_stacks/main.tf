@@ -23,10 +23,6 @@ resource "spacelift_stack" "stupid_stack" {
   terraform_workflow_tool         = "OPEN_TOFU"
 }
 
-#data "aws_iam_role" "stupid_stack" {
-#  name = "spacelift-allhands-testing "
-#}
-
 resource "spacelift_aws_integration" "this" {
   name = "aws_integration_pb_allhands"
 
