@@ -14,7 +14,7 @@ resource "spacelift_stack" "stupid_stack" {
   autodeploy                      = true
   branch                          = "main"
   repository                      = "pb-allhands-spacelift"
-  project_root                    = "terraform/stupid_stack"
+  project_root                    = "terraform/aws/vpc"
   manage_state                    = true
   terraform_external_state_access = true
   terraform_smart_sanitization    = true
