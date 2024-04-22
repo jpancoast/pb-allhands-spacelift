@@ -15,3 +15,7 @@ module "pb-spacelift-allhands-vpc" {
   source  = "spacelift.io/jpancoast/pb-spacelift-allhands-vpc/aws"
   version = "0.0.1"
 }
+
+output "vpc" {
+  value = module.aws_integration_pb_allhands
+}
