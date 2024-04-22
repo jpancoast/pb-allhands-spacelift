@@ -17,5 +17,5 @@ module "pb-spacelift-allhands-vpc" {
 }
 
 output "vpc" {
-  value = module.aws_integration_pb_allhands
+  value = module.pb-spacelift-allhands-vpc
 }
