@@ -12,6 +12,6 @@ resource "aws_vpc" "main" {
 }
 
 module "vpc" {
-  source  = "spacelift.io/jpancoast/pb-spacelift-allhands-vpc/aws"
+  source  = "spacelift.io/jpancoast/pb-spacelift-allhands-vpc"
   version = "0.0.1"
 }
