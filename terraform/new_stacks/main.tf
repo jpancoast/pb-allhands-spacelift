@@ -9,7 +9,7 @@ terraform {
 }
 
 resource "spacelift_stack" "stupid_stack" {
-  name                            = "stupid_stack_3"
+  name                            = "stupid_stack_4"
   administrative                  = false
   autodeploy                      = true
   branch                          = "main"
