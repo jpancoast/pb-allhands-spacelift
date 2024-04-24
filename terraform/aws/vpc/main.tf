@@ -7,7 +7,7 @@ resource "aws_vpc" "main" {
   instance_tenancy = "default"
 
   tags = {
-    Name = "pb-all-hands-spacelift"
+    Name = "pb-all-hands-spacelift-1"
   }
 }
 
